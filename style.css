@@ -1,0 +1,531 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box; 
+}
+body {
+	position: relative;
+}
+header {
+	height: 55px;
+	position: fixed;
+	box-shadow: 0px 5px 12px black;
+	width: 100%;
+	background-color:rgb(73, 168, 250);
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.logo {
+	font-size: 25px;
+	margin: 10px 0;
+}
+span {
+	color: coral;
+	font-size: 27px;
+}
+input ,label {
+	margin-top: 15px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul {
+	display: flex;
+	flex-direction: row;
+}
+ul li {
+	list-style: none;
+	margin: 18px 0;
+	margin-left: 15px;
+	position: relative; 
+}
+ul li a {
+	font-size: 17px;
+	color:#000;
+	transition: 0s color;
+}
+header .container ul li a::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	left: 0;
+	height: 2px;
+	background-color: red;
+	bottom: -5px;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: 0.5s transform;
+}
+header .container ul li a:hover::before{
+	transform: scaleX(1);
+	transform-origin: left;
+}
+.slide {
+	width: 100%;
+	overflow: hidden;
+	height: 90vh;
+	background-color: #f2f2f2; 
+}
+.left {
+	padding: 20px 35px;
+	padding-top: 180px;
+	padding-left: 80px
+}
+p {
+	margin-bottom: 2px;
+	font-size: 20px
+}
+h1 {
+	margin-bottom: 7px;
+	font-size: 40px;
+	text-shadow: 2px 2px 5px red;
+}
+.left button {
+	margin: 10px 5px;
+	width: 135px;
+	height: 35px;
+	color: #000;
+	background-color: rgba(255,255,255,0.9);
+	border: 2px solid #111;
+	border-radius: 10px
+}
+.left button:hover {
+	color: #fff;
+	background-color: #000;
+}
+.right img { 
+	width: 370px;
+	height: 370px;
+	margin-right: 50px;
+	margin-top: 90px;
+	border-radius: 50%;
+}
+#about {
+	width: 100%;
+	overflow: hidden;
+	transition: 2s ease ;
+	background-color: #f3f3f3;
+}
+.about-in {
+	padding: 15px 40px;
+	margin: 15px;
+	border-radius: 10px;
+	background-color: #fff;
+	margin-right: 50px;
+	box-shadow: 0px 0px 10px grey;
+}
+.about-in .row {
+	justify-content: flex-start;
+}
+.about-in .img {
+	width: 150px;
+	height: 170px;
+	border: 5px solid #000;
+}
+.about-in .img img {
+	margin: -10px -10px 10px 10px;
+	/*margin: 15px 0*/
+}
+.about-me {
+	width: 60%;
+	padding: 18px;
+	margin-left: 50px;
+}
+#about img{
+	width: 150px;
+	height: 150px;
+}
+#about button {
+	margin: 10px 5px;
+	width: 135px;
+	height: 35px;
+	color: #fff;
+	background-color: #000;
+	border: 2px solid #111;
+	border-radius: 10px
+}
+#about button:hover {
+	color: #000;
+	background-color: #fff;
+}
+#icon {
+	position: fixed;
+	width: 35px;
+	top: 50%;
+	left: 1%;
+	transform: translate(0,-50%);
+	height: 200px;
+	/* background-color: #ffa8a8; */
+	border-radius: 10px;
+}
+#icon img{
+	width: 35px;
+	margin: 0 ;
+}
+.tepa {
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	background-color:blue;
+	top: 90%;
+	right: 1%;
+	border-radius: 20px;
+	transform: rotateZ(-90deg);
+	transition: 1s active;
+}
+.tepa:active {
+	/* transform: translate(); */
+	transition: 2s ease;
+}
+.tepa img {
+	width: 40px;
+	height: 40px;
+}
+#servicers {
+	padding-top: 20px;
+}
+#servicers h3{
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+#servicers .p {
+	margin-bottom: 35px;
+}
+#servicers .row {
+	justify-content: space-around;
+}
+.item {
+	height: 400px;
+	width: 300px;
+	color: #fff;
+	background-color: #222;
+	padding: 25px 30px;transition: 0.5s;
+}
+.item:hover {
+	background-color: #051468;
+}
+.item img {
+	margin-top: -10px;
+	width: 120px;
+	height: 120px;
+	margin: 0px 20%;
+	text-align: center;
+	font-size: 22px;
+}
+.item h2  {
+	text-align: center;
+	margin:10px 0;
+}
+.item p {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.item button {
+	width: 120px;
+	height: 40px;
+	margin: 0px 22%;
+	border-radius: 10px;
+}
+#skills {
+	width: 100%;
+	padding-top: 20px;
+}
+#skills h3 {
+	text-align: center;
+	margin: 10px auto;
+}
+#skills p {
+	text-align: center;
+	margin: 10px 0;
+	margin-bottom: 40px;
+}
+#skills .row {
+	display: flex;
+	flex-flow: row wrap;
+	flex-basis: 50%;
+}
+#skills .left {
+	width: 50%;
+	padding: 10px;
+}
+#skills .row .left p {
+	margin: 0;
+	text-align: start;
+}
+#skills .right {
+	padding: 10px;
+	width: 50%;
+}
+#skills .right p {
+	text-align: start;
+	font-size: 15px;
+	margin: 5px 0;
+}
+#skills .row .right h3 {
+	text-align: start;
+	margin: 5px 0;
+}
+#skills .row .right .rezul {
+	width: 80%;
+	height: 5px;
+	background-color: rgb(195, 178, 178);
+}
+.rez-1 {
+	width: 55%;
+	height: 5px;
+	background-color: crimson;
+}
+.rez-2 {
+	width: 30%;
+	height: 5px;
+	background-color: crimson;
+}
+.rez-3 {
+	width: 1%;
+	height: 5px;
+	background-color: crimson;
+}
+.rez-4 {
+	width: 30%;
+	height: 5px;
+	background-color: crimson;
+}
+#contact {
+	width: 100%;
+	margin-top: 30px;
+	padding-top: 10px;
+	background-color: #222;
+	color: #fff;
+}
+#contact h3 {
+	text-align: center;
+	margin: 10px 0;
+}
+#contact .item {
+	width: 33%;
+	height: 300px;
+}
+#contact .item h5 {
+	text-align: start;
+	font-size: 20px;
+}
+#contact .row .item ul {
+	display: flex;
+	flex-direction: column;
+}
+#contact .row .item ul li {
+	list-style: inside;
+}
+#contact .row .item ul li a {
+	color: #fff;
+}
+.item form {
+	margin: 20px 0;
+} 
+.item input {
+	margin: 5px 0;
+	height: 25px;
+	width: 80%;
+}
+.item #text {
+	height: 40px;
+}
+#contact .item button {
+	justify-content: start;
+	margin: 5px 0;
+	height: 30px;
+	width: 95px;
+}
+#contact .item:hover {
+	background-color: #222;
+}
+header .row ul .bulim {
+	display: none;
+}
+label #btn,label #cancel {
+	position: absolute;
+	top: 50%;
+	transform: translate(0,-50%);
+	right: 30px;
+	font-size: 25px;
+	cursor: pointer;
+	display: none;
+}
+#cheek {
+	display: none;
+}
+ @media only screen and (max-width:470px) { 
+	label #btn {
+		display: inline-block
+	}
+	header .container ul {
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		right: -100%;
+		width: 50%;
+		display: block;
+		line-height: 40px;
+		z-index: 100;
+		height: 100vh;
+		background-color: #000;
+		transition: 0.5s;
+	}
+	header .container ul li a {
+		color: #fff;
+		margin-top: 80px;
+		height: 20px;
+		font-size: 20px;
+	}
+	#cheek:checked ~ ul {
+		right: 0;
+	}
+	#cheek:checked ~ label #btn {
+		display: none;
+	}
+	#cheek:checked ~ label #cancel{
+		display: block;
+		z-index: 101;
+		color: #fff;
+	}
+	header {
+		height: 100px;
+	}
+	header .container .row ul li {
+		display: none;
+	}
+	label #btn {
+		display: inline-block;
+	}
+} 
+@media only screen and (max-width:662px) {
+	header {
+		height: 50px;
+	}
+	label #btn {
+		display: inline-block
+	}
+	header .container ul {
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		right: -100%;
+		width: 50%;
+		display: block;
+		line-height: 40px;
+		z-index: 100;
+		height: 100vh;
+		background-color: #000;
+		transition: 0.5s;
+	}
+	header .container ul li a {
+		color: #fff;
+		margin-top: 80px;
+		height: 20px;
+		font-size: 20px;
+	}
+	#cheek:checked ~ ul {
+		right: 0;
+	}
+	#cheek:checked ~ label #btn {
+		display: none;
+	}
+	#cheek:checked ~ label #cancel{
+		display: block;
+		z-index: 101;
+		color: #fff;
+	}
+	.slide {
+		background-image: url('1.jpg');
+	}
+	.slide .row {
+		flex-direction: column;
+	}
+	.slide .container .row .left {
+		width: 100%;
+		margin: auto;
+	}
+	.slide .row .right {
+		display: none;
+	}
+	.about-me {
+		width: 100%;
+	}
+	#skills .row {
+		flex-direction: column;
+	}
+	#skills .row .left ,#skills .row .right {
+		width: 100%;
+		margin: auto;
+	}
+	#contact .row {
+		flex-direction: column;
+	}
+	#contact .item {
+		width: 90%;
+		margin: auto;
+	}
+}
+@media (max-width:992px){
+	label #btn {
+		display: inline-block
+	}
+	header .container ul {
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		right: -100%;
+		width: 50%;
+		display: block;
+		line-height: 40px;
+		z-index: 100;
+		height: 100vh;
+		background-color: #000;
+		transition: 0.5s;
+	}
+	header .container ul li a {
+		color: #fff;
+		margin-top: 80px;
+		height: 20px;
+		font-size: 20px;
+	}
+	#cheek:checked ~ ul {
+		right: 0;
+	}
+	#cheek:checked ~ label #btn {
+		display: none;
+	}
+	#cheek:checked ~ label #cancel{
+		display: block;
+		z-index: 101;
+		color: #fff;
+	}
+	header .container .ul {
+		display: none;
+	}
+	.slide .row .left {
+		width: 50%;
+	}
+	.slide .row .right {
+		width: 50%;
+	}
+	#about .row {
+		flex-direction: column;
+		margin: auto;
+	}	
+	#about .img , #about .about-me {
+		margin: 0 auto;
+	}
+	#servicers .row .item:nth-child(3) {
+		margin-top: 40px;
+	}
+}
